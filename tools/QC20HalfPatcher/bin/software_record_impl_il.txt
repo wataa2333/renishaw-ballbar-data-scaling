@@ -1,0 +1,218 @@
+﻿TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord|attrs=AutoLayout, AnsiClass, Class, BeforeFieldInit|base=System.Object
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord|Renishaw.Calibration.Ballbar.Infrastructure.Interface.IPersistStatus
+FIELD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_author|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_title|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_version|attrs=CompilerControlled, Private
+FIELD|System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty|attrs=CompilerControlled, Private
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::Author()
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::Title()
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::Version()
+PROPERTY|System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::IsDirty()
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::get_Author()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_author
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::set_Author(System.String)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldstr "value"
+IL|IL_0006: call System.String Microsoft.Requires::NotNull<System.String>(System.String,System.String)
+IL|IL_000B: pop
+IL|IL_000C: ldarg.0
+IL|IL_000D: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_author
+IL|IL_0012: ldarg.1
+IL|IL_0013: call System.Boolean System.String::op_Inequality(System.String,System.String)
+IL|IL_0018: brfalse.s IL_0028
+IL|IL_001A: ldarg.0
+IL|IL_001B: ldarg.1
+IL|IL_001C: stfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_author
+IL|IL_0021: ldarg.0
+IL|IL_0022: ldc.i4.1
+IL|IL_0023: stfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty
+IL|IL_0028: ret
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::get_Title()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_title
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::set_Title(System.String)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldstr "value"
+IL|IL_0006: call System.String Microsoft.Requires::NotNull<System.String>(System.String,System.String)
+IL|IL_000B: pop
+IL|IL_000C: ldarg.0
+IL|IL_000D: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_title
+IL|IL_0012: ldarg.1
+IL|IL_0013: call System.Boolean System.String::op_Inequality(System.String,System.String)
+IL|IL_0018: brfalse.s IL_0028
+IL|IL_001A: ldarg.0
+IL|IL_001B: ldarg.1
+IL|IL_001C: stfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_title
+IL|IL_0021: ldarg.0
+IL|IL_0022: ldc.i4.1
+IL|IL_0023: stfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty
+IL|IL_0028: ret
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::get_Version()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_version
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::set_Version(System.String)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldstr "value"
+IL|IL_0006: call System.String Microsoft.Requires::NotNull<System.String>(System.String,System.String)
+IL|IL_000B: pop
+IL|IL_000C: ldarg.0
+IL|IL_000D: ldfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_version
+IL|IL_0012: ldarg.1
+IL|IL_0013: call System.Boolean System.String::op_Inequality(System.String,System.String)
+IL|IL_0018: brfalse.s IL_0028
+IL|IL_001A: ldarg.0
+IL|IL_001B: ldarg.1
+IL|IL_001C: stfld System.String Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_version
+IL|IL_0021: ldarg.0
+IL|IL_0022: ldc.i4.1
+IL|IL_0023: stfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty
+IL|IL_0028: ret
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::get_IsDirty()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::Clean()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldc.i4.0
+IL|IL_0002: stfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::m_isDirty
+IL|IL_0007: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Void System.Object::.ctor()
+IL|IL_0006: ret
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.TestResult|attrs=AutoLayout, AnsiClass, Class, BeforeFieldInit|base=System.Object
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.TestResult|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.TestResult|Renishaw.Calibration.Ballbar.Infrastructure.Interface.IPersistStatus
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::m_softwareRecord|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::SoftwareRecord()
+METHOD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::get_SoftwareRecord()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::m_softwareRecord
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::set_SoftwareRecord(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldstr "value"
+IL|IL_0006: call Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Microsoft.Requires::NotNull<Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord>(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord,System.String)
+IL|IL_000B: pop
+IL|IL_000C: ldarg.0
+IL|IL_000D: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::m_softwareRecord
+IL|IL_0012: ldarg.1
+IL|IL_0013: beq.s IL_0023
+IL|IL_0015: ldarg.0
+IL|IL_0016: ldarg.1
+IL|IL_0017: stfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::m_softwareRecord
+IL|IL_001C: ldarg.0
+IL|IL_001D: ldc.i4.1
+IL|IL_001E: stfld System.Boolean Renishaw.Calibration.Ballbar.TestDocumentService.TestResult::m_isDirty
+IL|IL_0023: ret
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.TestResultManager|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Object
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.TestResultManager|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResultManager
+METHOD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.TestResultManager::CreateSoftwareRecord(System.String,System.String,System.String)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+IL|IL_0000: newobj System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::.ctor()
+IL|IL_0005: dup
+IL|IL_0006: ldarg.1
+IL|IL_0007: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Author(System.String)
+IL|IL_000C: dup
+IL|IL_000D: ldarg.2
+IL|IL_000E: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Title(System.String)
+IL|IL_0013: dup
+IL|IL_0014: ldarg.3
+IL|IL_0015: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Version(System.String)
+IL|IL_001A: ret
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Object
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter|Renishaw.Calibration.Ballbar.TestDocumentService.IDocumentFormatter
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter::LoadSoftwareRecord(Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocument)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter::m_testResult
+IL|IL_0006: newobj System.Void Renishaw.Calibration.Ballbar.TestDocumentService.SoftwareRecord::.ctor()
+IL|IL_000B: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::set_SoftwareRecord(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord)
+IL|IL_0010: ldarg.0
+IL|IL_0011: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter::m_testResult
+IL|IL_0016: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_SoftwareRecord()
+IL|IL_001B: ldstr "Renishaw"
+IL|IL_0020: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Author(System.String)
+IL|IL_0025: ldarg.0
+IL|IL_0026: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter::m_testResult
+IL|IL_002B: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_SoftwareRecord()
+IL|IL_0030: ldarg.1
+IL|IL_0031: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocument::get_Owner()
+IL|IL_0036: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Title(System.String)
+IL|IL_003B: ldarg.0
+IL|IL_003C: ldfld Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocumentFormatter::m_testResult
+IL|IL_0041: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_SoftwareRecord()
+IL|IL_0046: ldarg.1
+IL|IL_0047: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.RtbDocument::get_Version()
+IL|IL_004C: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Version(System.String)
+IL|IL_0051: ret
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlDocumentFormatter|attrs=AutoLayout, AnsiClass, Class, BeforeFieldInit|base=System.Object
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlDocumentFormatter|Renishaw.Calibration.Ballbar.TestDocumentService.IDocumentFormatter
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlDocumentFormatter::PopulateSoftwareRecord(System.Xml.XmlNode,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord)|attrs=PrivateScope, ReuseSlot, Private, Static, HideBySig|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldarg.0
+IL|IL_0002: ldstr "AUTHOR"
+IL|IL_0007: call System.String Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlParser::SelectSingleNodeString(System.Xml.XmlNode,System.String)
+IL|IL_000C: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Author(System.String)
+IL|IL_0011: ldarg.1
+IL|IL_0012: ldarg.0
+IL|IL_0013: ldstr "TITLE"
+IL|IL_0018: call System.String Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlParser::SelectSingleNodeString(System.Xml.XmlNode,System.String)
+IL|IL_001D: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Title(System.String)
+IL|IL_0022: ldarg.1
+IL|IL_0023: ldarg.0
+IL|IL_0024: ldstr "VERSION"
+IL|IL_0029: call System.String Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlParser::SelectSingleNodeString(System.Xml.XmlNode,System.String)
+IL|IL_002E: callvirt System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Version(System.String)
+IL|IL_0033: ret
+METHOD|System.Xml.XmlDocumentFragment Renishaw.Calibration.Ballbar.TestDocumentService.Formatters.XmlDocumentFormatter::StoreSoftwareRecord(System.Xml.XmlDocument,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord)|attrs=PrivateScope, ReuseSlot, Private, Static, HideBySig|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: callvirt System.Xml.XmlDocumentFragment System.Xml.XmlDocument::CreateDocumentFragment()
+IL|IL_0006: ldarg.0
+IL|IL_0007: ldstr "SOFTWARE"
+IL|IL_000C: callvirt System.Xml.XmlElement System.Xml.XmlDocument::CreateElement(System.String)
+IL|IL_0011: stloc.0
+IL|IL_0012: ldarg.0
+IL|IL_0013: ldstr "AUTHOR"
+IL|IL_0018: callvirt System.Xml.XmlElement System.Xml.XmlDocument::CreateElement(System.String)
+IL|IL_001D: stloc.1
+IL|IL_001E: ldloc.1
+IL|IL_001F: ldarg.1
+IL|IL_0020: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Author()
+IL|IL_0025: callvirt System.Void System.Xml.XmlNode::set_InnerText(System.String)
+IL|IL_002A: ldloc.0
+IL|IL_002B: ldloc.1
+IL|IL_002C: callvirt System.Xml.XmlNode System.Xml.XmlNode::AppendChild(System.Xml.XmlNode)
+IL|IL_0031: pop
+IL|IL_0032: ldarg.0
+IL|IL_0033: ldstr "TITLE"
+IL|IL_0038: callvirt System.Xml.XmlElement System.Xml.XmlDocument::CreateElement(System.String)
+IL|IL_003D: stloc.2
+IL|IL_003E: ldloc.2
+IL|IL_003F: ldarg.1
+IL|IL_0040: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Title()
+IL|IL_0045: callvirt System.Void System.Xml.XmlNode::set_InnerText(System.String)
+IL|IL_004A: ldloc.0
+IL|IL_004B: ldloc.2
+IL|IL_004C: callvirt System.Xml.XmlNode System.Xml.XmlNode::AppendChild(System.Xml.XmlNode)
+IL|IL_0051: pop
+IL|IL_0052: ldarg.0
+IL|IL_0053: ldstr "VERSION"
+IL|IL_0058: callvirt System.Xml.XmlElement System.Xml.XmlDocument::CreateElement(System.String)
+IL|IL_005D: stloc.3
+IL|IL_005E: ldloc.3
+IL|IL_005F: ldarg.1
+IL|IL_0060: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Version()
+IL|IL_0065: callvirt System.Void System.Xml.XmlNode::set_InnerText(System.String)
+IL|IL_006A: ldloc.0
+IL|IL_006B: ldloc.3
+IL|IL_006C: callvirt System.Xml.XmlNode System.Xml.XmlNode::AppendChild(System.Xml.XmlNode)
+IL|IL_0071: pop
+IL|IL_0072: dup
+IL|IL_0073: ldloc.0
+IL|IL_0074: callvirt System.Xml.XmlNode System.Xml.XmlNode::AppendChild(System.Xml.XmlNode)
+IL|IL_0079: pop
+IL|IL_007A: ret

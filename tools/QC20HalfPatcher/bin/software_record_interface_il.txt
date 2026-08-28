@@ -1,0 +1,18 @@
+﻿TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord|Renishaw.Calibration.Ballbar.Infrastructure.Interface.IPersistStatus
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::Author()
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::Title()
+PROPERTY|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::Version()
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Author()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Author(System.String)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Title()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Title(System.String)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::get_Version()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord::set_Version(System.String)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+INTERFACE|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult|Renishaw.Calibration.Ballbar.Infrastructure.Interface.IPersistStatus
+PROPERTY|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::SoftwareRecord()
+METHOD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_SoftwareRecord()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::set_SoftwareRecord(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResultManager|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+METHOD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ISoftwareRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResultManager::CreateSoftwareRecord(System.String,System.String,System.String)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL

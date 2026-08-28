@@ -1,0 +1,30 @@
+QC20 采集数据 50% DLL 动态模拟
+
+测试方式：
+在内存中构造真实 Renishaw.IO.ChannelFilters.TriggeredBufferingFilter，
+分别加载原版和修改版 Renishaw.Calibration.Ballbar.dll，
+调用真实 BallbarInstrument.ReadRecord(int, double[], int, int)。
+
+缓存样本：
+10, -4, 0.125, 8, 100
+
+调用参数：
+index = 1
+arrayIndex = 2
+count = 3
+
+原版：
+returned = 3
+destination = 999, 999, -4, 0.125, 8, 999
+
+修改版：
+returned = 3
+destination = 999, 999, -2, 0.0625, 4, 999
+
+结论：
+1. 实际返回数量保持不变；
+2. 三个有效样本均严格乘以 0.5；
+3. 有效区域以外的哨兵值保持不变；
+4. 修改方法已成功由 .NET JIT 编译并执行。
+
+本测试不包含真实 QC20 蓝牙通信、驱动、设备固件、完整 UI/报告流程和企业安全策略。

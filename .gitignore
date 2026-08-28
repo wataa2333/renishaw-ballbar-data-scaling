@@ -1,0 +1,21 @@
+# Local editor and operating-system files
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+.DS_Store
+
+# Temporary and diagnostic files
+*.tmp
+*.temp
+*.log
+~$*
+
+# Secrets that may be added locally in the future
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets/

@@ -1,0 +1,31 @@
+﻿TYPE|Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=Renishaw.Calibration.Ballbar.Infrastructure.Interface.Presenter`1<Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView>
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.Api.IReviewResults Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::m_service|attrs=CompilerControlled, Private
+FIELD|System.Threading.SynchronizationContext Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::m_context|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Interface.Api.IReviewResults Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::Service()
+PROPERTY|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::IsActive()
+PROPERTY|System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::CompanyLogoPath()
+METHOD|Renishaw.Calibration.Ballbar.Analysis.Interface.Api.IReviewResults Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::get_Service()|attrs=PrivateScope, ReuseSlot, Family, HideBySig, SpecialName|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::get_IsActive()|attrs=PrivateScope, ReuseSlot, Private, HideBySig, SpecialName|impl=IL
+METHOD|System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::get_CompanyLogoPath()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::OnViewSet()|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::OnViewReady()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::OnCloseView()|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.FeatureStatus Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::GetFeatureStatus(System.String,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::OnReportActivating(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::CreateClipboardMetaFile(System.Windows.Forms.HtmlDocument)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|Renishaw.Calibration.Ballbar.BallbarAnalysisService.Interface.IBallbarAnalysis Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::GetAnalysis(System.String)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::CopyToClipboard(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::Print(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::Configure(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::UnitChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::TestDocumentSaved(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::ReportLanguageChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::ReportActivating(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::CopyBrowserDocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig, HasSecurity|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisViewPresenter::<Configure>b__17_0(System.Object)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL

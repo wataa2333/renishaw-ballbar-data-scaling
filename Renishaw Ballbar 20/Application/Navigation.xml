@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Navigation>
+  <User type="QuickCheck">
+    <UseCase name="runTest" title="_performBallbarTest" base="addTestTemplate">
+      <NavigationStep id="quickCheckHomePage" command="Home" />
+      <NavigationStep id="addTestTemplate" command="AddTestTemplate">
+        <Step command="SetupTest" target="testDefn1"/>
+      </NavigationStep>
+      <NavigationStep id="testDefn1" command="SetupTestTemplate">
+        <Step command="Previous" target="quickCheckHomePage" />
+        <Step command="Next" target="testDefn2" />
+      </NavigationStep>
+      <NavigationStep id="testDefn2" command="AddTestTemplate2">
+        <Step command="Next" target="testSetUp" />
+        <Step command="Previous" target="testDefn1" />
+      </NavigationStep>
+      <NavigationStep id="testSetUp" command="SetupSession">
+        <Step command="Previous" target="testDefn2" />
+        <Step command="Next" target="connectBallbar" />
+      </NavigationStep>
+      <NavigationStep id="connectBallbar" command="ConnectBallbar">
+        <Step command="Previous" target="testSetUp" />
+        <Step command="Next" target="capturePage" />
+      </NavigationStep>
+      <NavigationStep id="capturePage" command="RunBallbarTest">
+        <Step command="ChangeTestTemplate" target="testDefn1" />
+        <Step command="Previous" target="connectBallbar" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewTestResultsQC" previousImageUrl="LeftArrow">
+        <Step command="ChangeTestTemplate" target="testDefn1" />
+        <Step command="Previous" target="capturePage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="viewReport" title="_reviewTestResults" base="selectTestReport" >
+      <NavigationStep id="quickCheckHomePage" command="Home" />
+      <NavigationStep id="selectTestReport" command="MaintainTestResults">
+        <Step command="Previous" target="quickCheckHomePage" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewResults" previousImageUrl="list">
+        <Step command="Previous" target="selectTestReport" />
+      </NavigationStep>
+    </UseCase>
+  </User>
+  <User type="Administrator">
+    <UseCase name="maintainCalibrators" title="_maintainCalibrators" base="maintainCalibrators">
+      <NavigationStep id="adminHomePage" command="Home" />
+      <NavigationStep id="maintainCalibrators" command="MaintainCalibrators">
+        <Step command="Previous" target="adminHomePage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="maintainBallbars" title="_maintainBallbars" base="maintainBallbars">
+      <NavigationStep id="adminHomePage" command="Home" />
+      <NavigationStep id="maintainBallbars" command="MaintainBallbars">
+        <Step command="Previous" target="adminHomePage" />
+      </NavigationStep>
+    </UseCase>
+  </User>
+  <User type="Advanced">
+    <UseCase name="runTest" title="_performAdvancedBallbarTest" base="maintainMachines" >
+      <NavigationStep id="advancedHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="MaintainMachines">
+        <Step command="Next" target="quickCheckTest" />
+        <Step command="Previous" target="advancedHomePage" />
+      </NavigationStep>
+      <NavigationStep id="quickCheckTest" command="QuickCheckTest">
+        <Step command="QuickCheck" target="addTestTemplateQC" />
+        <Step command="Next" target="maintainTestSpecs"/>
+      </NavigationStep>
+      <NavigationStep id="addTestTemplateQC" command="AddTestTemplate">
+        <Step command="SetupTest" target="setupTestTemplateQC"/>
+      </NavigationStep>
+      <NavigationStep id="setupTestTemplateQC" command="SetupTestTemplate">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="addTestTemplate2QC" />
+      </NavigationStep>
+      <NavigationStep id="addTestTemplate2QC" command="AddTestTemplate2">
+        <Step command="Previous" target="setupTestTemplateQC" />
+        <Step command="Next" target="testSummaryQC" />
+      </NavigationStep>
+      <NavigationStep id="testSummaryQC" command="SetupSession">
+        <Step command="Previous" target="addTestTemplate2QC" />
+        <Step command="Next" target="connectBallbarQC" />
+      </NavigationStep>
+      <NavigationStep id="connectBallbarQC" command="ConnectBallbar">
+        <Step command="Previous" target="testSummaryQC" />
+        <Step command="Next" target="capturePageQC" />
+      </NavigationStep>
+      <NavigationStep id="capturePageQC" command="RunBallbarTest">
+        <Step command="ChangeTestTemplate" target="setupTestTemplateQC" />
+        <Step command="Previous" target="connectBallbarQC" />
+        <Step command="Next" target="reportPageQC" />
+      </NavigationStep>
+      <NavigationStep id="reportPageQC" command="ReviewTestResultsQC" previousImageUrl="LeftArrow">
+        <Step command="ChangeTestTemplate" target="setupTestTemplateQC" />
+        <Step command="Previous" target="capturePageQC" />
+      </NavigationStep>
+      <NavigationStep id="maintainTestSpecs" command="MaintainTestTemplates">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Add" target="addTestTemplate" />
+        <Step command="Edit" target="editTestTemplate" />
+        <Step command="Next" target="testSummary" />
+      </NavigationStep>
+      <NavigationStep id="editTestTemplate" command="EditTestTemplate">
+        <Step command="SetupTest" target="setupTestTemplate"/>
+      </NavigationStep>
+      <NavigationStep id="addTestTemplate" command="AddTestTemplate">
+        <Step command="SetupTest" target="setupTestTemplate"/>
+      </NavigationStep>
+      <NavigationStep id="setupTestTemplate" command="SetupTestTemplate">
+        <Step command="Previous" target="maintainTestSpecs" />
+        <Step command="Next" target="addTestTemplate2" />
+      </NavigationStep>
+      <NavigationStep id="addTestTemplate2" command="AddTestTemplate2">
+        <Step command="Previous" target="setupTestTemplate" />
+        <Step command="Next" target="maintainTestSpecs" />
+      </NavigationStep>
+      <NavigationStep id="testSummary" command="SetupSession">
+        <Step command="Previous" target="maintainTestSpecs" />
+        <Step command="Next" target="connectBallbar" />
+      </NavigationStep>
+      <NavigationStep id="connectBallbar" command="ConnectBallbar">
+        <Step command="Previous" target="testSummary" />
+        <Step command="Next" target="capturePage" />
+      </NavigationStep>
+      <NavigationStep id="capturePage" command="RunBallbarTest">
+        <Step command="ChangeTestTemplate" target="maintainTestSpecs" />
+        <Step command="Previous" target="connectBallbar" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewTestResults" previousImageUrl="LeftArrow">
+        <Step command="ChangeTestTemplate" target="maintainTestSpecs" />
+        <Step command="Previous" target="capturePage" />
+        <Step command="Next" target="historyReport" />
+      </NavigationStep>
+      <NavigationStep id="historyReport" command="ViewMachineHistory">
+        <Step command="Previous" target="reportPage" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="reviewResults" title="_reviewTestResults" base="maintainMachines" >
+      <NavigationStep id="advancedHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="SelectMachine">
+        <Step command="Previous" target="advancedHomePage" />
+        <Step command="Next" target="selectTestReport" />
+      </NavigationStep>
+      <NavigationStep id="selectTestReport" command="MaintainTestResults">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewResults" previousImageUrl="list">
+        <Step command="Previous" target="selectTestReport" />
+        <Step command="Next" target="historyReport" />
+      </NavigationStep>
+      <NavigationStep id="historyReport" command="ViewMachineHistory">
+        <Step command="Previous" target="reportPage" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="viewHistory" title="_viewMachineHistory" base="maintainMachines" >
+      <NavigationStep id="advancedHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="SelectMachineForHistory">
+        <Step command="Previous" target="advancedHomePage" />
+        <Step command="Next" target="maintainMachineHistory" />
+      </NavigationStep>
+      <NavigationStep id="maintainMachineHistory" command="MaintainMachineHistory">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="EditHistory" target="buildMachineHistory" />
+        <Step command="Next" target="viewMachineHistory" />
+      </NavigationStep>
+      <NavigationStep id="viewMachineHistory" command="ViewMachineHistory">
+        <Step command="Previous" target="maintainMachineHistory" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="HistoryReviewResults" previousImageUrl="LeftArrow">
+        <Step command="Previous" target="viewMachineHistory" />
+      </NavigationStep>
+      <NavigationStep id="buildMachineHistory" command="BuildMachineHistory">
+        <Step command="Previous" target="maintainMachineHistory" />
+        <Step command="Next" target="viewMachineHistoryHB" />
+      </NavigationStep>
+      <NavigationStep id="viewMachineHistoryHB" command="ViewMachineHistory">
+        <Step command="Previous" target="buildMachineHistory" />
+        <Step command="Next" target="reportPageHB" />
+      </NavigationStep>
+      <NavigationStep id="reportPageHB" command="HistoryReviewResults" previousImageUrl="LeftArrow">
+        <Step command="Previous" target="viewMachineHistoryHB" />
+      </NavigationStep>
+    </UseCase>
+  </User>
+  <User type="Operator">
+    <UseCase name="runTest" title="_performBallbarTest" base="maintainMachines" >
+      <NavigationStep id="operatorHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="SelectMachine">
+        <Step command="Next" target="quickCheckTest" />
+        <Step command="Previous" target="operatorHomePage" />
+      </NavigationStep>
+      <NavigationStep id="quickCheckTest" command="QuickCheckTest">
+        <Step command="QuickCheck" target="addTestTemplateQC" />
+        <Step command="Next" target="maintainTestSpecs"/>
+      </NavigationStep>
+      <NavigationStep id="addTestTemplateQC" command="AddTestTemplate">
+        <Step command="SetupTest" target="setupTestTemplateQC"/>
+      </NavigationStep>
+      <NavigationStep id="setupTestTemplateQC" command="SetupTestTemplate">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="addTestTemplate2QC" />
+      </NavigationStep>
+      <NavigationStep id="addTestTemplate2QC" command="AddTestTemplate2">
+        <Step command="Previous" target="setupTestTemplateQC" />
+        <Step command="Next" target="testSummaryQC" />
+      </NavigationStep>
+      <NavigationStep id="testSummaryQC" command="SetupSession">
+        <Step command="Previous" target="addTestTemplate2QC" />
+        <Step command="Next" target="connectBallbarQC" />
+      </NavigationStep>
+      <NavigationStep id="connectBallbarQC" command="ConnectBallbar">
+        <Step command="Previous" target="testSummaryQC" />
+        <Step command="Next" target="capturePageQC" />
+      </NavigationStep>
+      <NavigationStep id="capturePageQC" command="RunBallbarTest">
+        <Step command="ChangeTestTemplate" target="setupTestTemplateQC" />
+        <Step command="Previous" target="connectBallbarQC" />
+        <Step command="Next" target="reportPageQC" />
+      </NavigationStep>
+      <NavigationStep id="reportPageQC" command="ReviewTestResultsQC" previousImageUrl="LeftArrow">
+        <Step command="ChangeTestTemplate" target="setupTestTemplateQC" />
+        <Step command="Previous" target="capturePageQC" />
+      </NavigationStep>
+      <NavigationStep id="maintainTestSpecs" command="SelectTestTemplate">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="testSummary" />
+      </NavigationStep>
+      <NavigationStep id="testSummary" command="SetupSession">
+        <Step command="Previous" target="maintainTestSpecs" />
+        <Step command="Next" target="connectBallbar" />
+      </NavigationStep>
+      <NavigationStep id="connectBallbar" command="ConnectBallbar">
+        <Step command="Previous" target="testSummary" />
+        <Step command="Next" target="capturePage" />
+      </NavigationStep>
+      <NavigationStep id="capturePage" command="RunBallbarTest">
+        <Step command="ChangeTestTemplate" target="maintainTestSpecs" />
+        <Step command="Previous" target="connectBallbar" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewTestResults" previousImageUrl="LeftArrow">
+        <Step command="ChangeTestTemplate" target="maintainTestSpecs" />
+        <Step command="Previous" target="capturePage" />
+        <Step command="Next" target="historyReport" />
+      </NavigationStep>
+      <NavigationStep id="historyReport" command="ViewMachineHistory">
+        <Step command="Previous" target="reportPage" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="reviewResults" title="_reviewTestResults" base="maintainMachines" >
+      <NavigationStep id="operatorHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="SelectMachine">
+        <Step command="Previous" target="operatorHomePage" />
+        <Step command="Next" target="selectTestReport" />
+      </NavigationStep>
+      <NavigationStep id="selectTestReport" command="SelectTestResult">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="ReviewResults" previousImageUrl="list">
+        <Step command="Previous" target="selectTestReport" />
+        <Step command="Next" target="historyReport" />
+      </NavigationStep>
+      <NavigationStep id="maintainHistories" command="MaintainTestHistory">
+        <Step command="Next" target="historyReportQC" />
+        <Step command="Previous" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="historyReportQC" command="ViewMachineHistory">
+        <Step command="Next" target="reportPage" />
+        <Step command="Previous" target="maintainHistories" />
+      </NavigationStep>
+      <NavigationStep id="historyReport" command="ViewMachineHistory">
+        <Step command="Previous" target="reportPage" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+    </UseCase>
+    <UseCase name="viewHistory" title="_viewMachineHistory" base="maintainMachines" >
+      <NavigationStep id="operatorHomePage" command="Home" />
+      <NavigationStep id="maintainMachines" command="SelectMachineForHistory">
+        <Step command="Previous" target="operatorHomePage" />
+        <Step command="Next" target="maintainMachineHistory" />
+      </NavigationStep>
+      <NavigationStep id="maintainMachineHistory" command="MaintainMachineHistory">
+        <Step command="Previous" target="maintainMachines" />
+        <Step command="Next" target="viewMachineHistory" />
+      </NavigationStep>
+      <NavigationStep id="viewMachineHistory" command="ViewMachineHistory">
+        <Step command="Previous" target="maintainMachineHistory" />
+        <Step command="Next" target="reportPage" />
+      </NavigationStep>
+      <NavigationStep id="reportPage" command="HistoryReviewResults" previousImageUrl="LeftArrow">
+        <Step command="Previous" target="viewMachineHistory" />
+      </NavigationStep>    </UseCase>
+  </User>
+</Navigation>

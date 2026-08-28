@@ -1,0 +1,279 @@
+﻿TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_headerSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_sideSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|System.Drawing.Printing.PrintDocument Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_printDocument|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_mainResult|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.ControlPrinter Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_printer|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::splitContainer1|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::arcHeader|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::splitContainer2|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::splitContainer3|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::pnlLogo|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::pcbLogo|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.PrintPreviewWithSettingsDialog Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::printPreviewDialog|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisBidirectionalReportResults Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::brrResults|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.UI.AnalysisReportGraph Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::argGraph|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::OnResize(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::splitContainer1_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::splitContainer3_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, HasSecurity|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::IsResultBidirectional(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::PositionCompanyLogo()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayTestHeader(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayTestParameters(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayTestGraph(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayTestResults(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayTestFailed(System.String)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::DisplayCompanyLogo(System.String)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::m_printDocument_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::argGraph_GraphChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::UpdateColours()|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::UpdateBackColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::UpdateForeColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.IBidirectionalCircularDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.IBidirectionalCircularDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.IBidirectionalCircularDeviationView::DisplayBidirectionalCircularDeviationAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_headerSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_sideSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|System.Drawing.Printing.PrintDocument Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_printDocument|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_mainResult|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_runDirection|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.ControlPrinter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_printer|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005ViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::splitContainer1|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::arcHeader|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::splitContainer2|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::pcbLogo|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.PrintPreviewWithSettingsDialog Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::printPreviewDialog|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::pnlLogo|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::splitContainer3|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisCircularDeviationReportResultsControl Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::cdrResults|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.UI.AnalysisReportGraph Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::argGraph|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005ViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::.ctor(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::OnResize(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::splitContainer1_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::splitContainer3_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, HasSecurity|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::IsResultForDirection(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::PositionCompanyLogo()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayTestHeader(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayTestParameters(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayTestGraph(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayTestResult(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::DisplayCompanyLogo(System.String)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::m_printDocument_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::argGraph_GraphChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::UpdateColours()|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::UpdateBackColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::UpdateForeColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005ViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::m_testResult|attrs=CompilerControlled, Private
+FIELD|POLARGRAPHCONTROL3Lib.IPolarGraphControl Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::m_graph|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::runDirection|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::panel1|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.WebBrowser Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::webBrowser|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::.ctor(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::webBrowser_DocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::LoadDocument()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::graphEvents_GraphChanged()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::graphEvents_RightClick()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::AddAnalysisResults(System.Windows.Forms.HtmlDocument,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IAnalysisResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::InitialiseGraphControl()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationView::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviationViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::m_testResult|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::reportStandard|attrs=CompilerControlled, Private
+FIELD|POLARGRAPHCONTROL3Lib.IPolarGraphControl Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::m_graph|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::panel1|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.WebBrowser Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::webBrowser|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::webBrowser_DocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::LoadDocument()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::InitialiseGraphControl()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::AddAnalysisResults(System.Windows.Forms.HtmlDocument,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IAnalysisResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::AddTestParameters(System.Windows.Forms.HtmlDocument)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::graphEvents_GraphChanged()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::graphEvents_RightClick()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisView::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularHysteresisViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.IMeanBidirectionalRadialDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, ClassSemanticMask, Abstract|base=(none)
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.IMeanBidirectionalRadialDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.IMeanBidirectionalRadialDeviationView::DisplayMeanBidirectionalRadialDeviationAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, VtableLayoutMask, Abstract|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_headerSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_sideSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|System.Drawing.Printing.PrintDocument Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_printDocument|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_mainResult|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.ControlPrinter Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_printer|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::splitContainer1|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::arcHeader|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::splitContainer2|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::splitContainer3|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisBidirectionalReportResults Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::abrResults|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.UI.AnalysisReportGraph Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::argGraph|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::pnlLogo|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::pcbLogo|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.PrintPreviewWithSettingsDialog Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::printPreviewDialog|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::OnResize(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::splitContainer1_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::splitContainer3_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, HasSecurity|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::IsResultBidirectional(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::PositionCompanyLogo()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayTestHeader(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayTestParameters(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayTestGraph(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayTestResults(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::DisplayCompanyLogo(System.String)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::m_printDocument_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::argGraph_GraphChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::UpdateColours()|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::UpdateBackColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::UpdateForeColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_headerSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.Int32 Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_sideSplitterDistance|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|System.Drawing.Printing.PrintDocument Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_printDocument|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_mainResult|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_runDirection|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.ControlPrinter Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_printer|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005ViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::components|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::arcHeader|attrs=CompilerControlled, Private
+FIELD|Renishaw.Drawing.Printing.PrintPreviewWithSettingsDialog Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::printPreviewDialog|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::splitContainer1|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::splitContainer2|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.SplitContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::splitContainer3|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisRadialDeviationReportResults Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::rdrResults|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.UI.AnalysisReportGraph Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::argGraph|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::pcbLogo|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::pnlLogo|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005ViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::.ctor(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::OnResize(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::splitContainer1_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::splitContainer3_Resize(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask, HasSecurity|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::IsResultForDirection(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::PositionCompanyLogo()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayTestHeader(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayTestParameters(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayTestGraph(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayTestResult(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::DisplayCompanyLogo(System.String)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::m_printDocument_PrintPage(System.Object,System.Drawing.Printing.PrintPageEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::argGraph_GraphChanged(System.Object,System.EventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::UpdateColours()|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::UpdateBackColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::UpdateForeColours()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005ViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::m_testResult|attrs=CompilerControlled, Private
+FIELD|POLARGRAPHCONTROL3Lib.IPolarGraphControl Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::m_graph|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.UnitService.Interface.IUnit Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::m_errorLengthUnit|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::runDirection|attrs=CompilerControlled, Private
+FIELD|System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::reportStandard|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::_presenter|attrs=CompilerControlled, Private
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Panel Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::panel1|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.WebBrowser Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::webBrowser|attrs=CompilerControlled, Private
+PROPERTY|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationViewPresenter Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::Presenter()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::.ctor(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.RunDirection)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::OnLoad(System.EventArgs)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::webBrowser_DocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::SetReportStandard(System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::DisplayAnalysis(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::CopyBrowserContentToClipboard()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::PrintBrowserContent()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::ConfigureGraph()|attrs=PrivateScope, ReuseSlot, Public, Final, Virtual, HideBySig, VtableLayoutMask|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::LoadDocument()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::graphEvents_GraphChanged()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::graphEvents_RightClick()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::InitialiseGraphControl()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::AddAnalysisResults(System.Windows.Forms.HtmlDocument,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IAnalysisResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Boolean Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::HasFeatureResults(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IAnalysisResult)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::AddFeatureResults(System.Windows.Forms.HtmlDocument,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IFeatureResult,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IFeatureResult,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IFeatureResult,Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IFeatureResult)|attrs=PrivateScope, ReuseSlot, Private, Static, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationView::set_Presenter(Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviationViewPresenter)|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName|impl=IL

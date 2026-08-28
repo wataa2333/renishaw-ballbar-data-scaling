@@ -1,0 +1,44 @@
+﻿<SolutionProfile xmlns="http://schemas.microsoft.com/pag/cab-profile/2.0">
+  <Section Name="Layout">
+    <Modules>
+      <ModuleInfo AssemblyFile="Infrastructure.Layout.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.UnitServiceModule.dll" />
+    </Modules>
+  </Section>
+  <Section Name="Services">
+    <Dependencies>
+      <Dependency Name="Layout" />
+    </Dependencies>
+    <Modules>
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.XmlBallbarCatalogService.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.XmlMachineCatalogService.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.TestDocumentService.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.LegacyServices.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.BallbarAnalysisService.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.BallbarDeviceService.dll" />
+    </Modules>
+  </Section>
+  <Section Name="Apps">
+    <Dependencies>
+      <Dependency Name="Layout" />
+      <Dependency Name="Services" />
+    </Dependencies>
+    <Modules>
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.Analysis.Iso230.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.Analysis.AsmeB557.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.Analysis.AsmeB554.dll" />
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.Analysis.RenishawDiagnostics.dll" />
+    </Modules>
+  </Section>
+  <Section Name="Extensions">
+    <Dependencies>
+      <Dependency Name="Apps" />
+    </Dependencies>
+    <Modules>
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.Analysis.Volumetric.dll" />
+      <!-- ***remove this line***
+      <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.MaintainTestDocuments.Mail.dll" />
+      ***remove this line*** -->
+    </Modules>
+  </Section>
+</SolutionProfile>

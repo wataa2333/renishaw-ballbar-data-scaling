@@ -1,0 +1,64 @@
+QC20 采集数据 50%：ISO 230 分析与报告控件模拟
+
+一、真实核心算法
+
+算法：
+Renishaw.Calibration.Ballbar.Analysis.Algorithm.Iso230.Iso230V2005Analysis
+
+输入：
+两组 360° CW/CCW 合成采样。
+第一轮保持原幅值，第二轮所有采样乘以 0.5。
+
+部分结果：
+
+AF_CIRCULAR_DEVIATION_CW
+原始 10.301193260389141
+一半  5.150596630130622
+比例  0.499999999993792
+
+AF_MAX_RADIAL_DEVIATION_CW
+原始 5.150595739891628
+一半  2.575297869285009
+比例  0.499999999871703
+
+AF_MIN_RADIAL_DEVIATION_CW
+原始 -5.150597520497513
+一半  -2.575298760845612
+比例  0.500000000115881
+
+AF_CIRCULAR_DEVIATION_CCW
+原始 10.294983533370328
+一半  5.147491766649637
+比例  0.499999999996549
+
+AF_BIDIRECTIONAL_CIRCULAR_DEVIATION
+原始 0.090067347088052
+一半  0.045033673529815
+比例  0.499999999842220
+
+最大/最小偏差的角度位置保持不变，符合幅值缩放的预期。
+
+二、真实报告控件
+
+调用的软件控件：
+- IsoAnalysisCircularDeviationReportResultsControl
+- IsoAnalysisRadialDeviationReportResults
+- IsoAnalysisBidirectionalReportResults
+
+控件标签结果：
+
+CIRCULAR_LABEL=5.150596
+RADIAL_MAX_LABEL=2.575298 @ 269.750693°
+RADIAL_MIN_LABEL=-2.575299 @ 89.252078°
+BIDIRECTIONAL_LABEL=0.045034
+
+结论：
+“采集样本减半 → ISO 230 分析结果减半 → 报告控件显示减半值”
+已经完成无硬件动态验证。
+
+未包含：
+- 完整 Renishaw Ballbar 20 应用壳；
+- 极坐标图 ActiveX/COM 渲染；
+- HTML/打印页面排版；
+- 物理打印机或 PDF 驱动；
+- QC20 蓝牙实机和企业签名策略。

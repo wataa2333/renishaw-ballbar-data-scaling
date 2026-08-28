@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SolutionProfile xmlns="http://schemas.microsoft.com/pag/cab-profile">
+  <Modules>
+    <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.ModifyUnitPreferences.dll" />
+    <ModuleInfo AssemblyFile="Renishaw.Calibration.Ballbar.UnitServiceModule.dll" />
+  </Modules>
+</SolutionProfile>

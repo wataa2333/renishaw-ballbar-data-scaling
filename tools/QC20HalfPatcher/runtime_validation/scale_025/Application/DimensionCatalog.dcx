@@ -1,0 +1,1747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  DimensionCatalog.xml
+  
+  This file defines dimensions and their units. Each dimension must contain a primary unit, all measurements 
+  created in this dimension will store their quantity internally in this primary unit.
+  Each of the other units in the dimension utilise a UnitConverter this contains the equation that calculates 
+  the primary quantity. e.g. The Linear conversion y = mx + c is for converting the quantity TO primary units
+  for that dimension.
+-->
+<!DOCTYPE xsl:DimensionCatalog[
+    <!ENTITY deg "&#176;">
+    <!ENTITY micro "&#181;">
+]>
+
+<DimensionCatalog xmlns="http://tempuri.org/XMLSchema.xsd">
+    <Dimensions>
+
+        <Dimension Name="UT_LENGTH">
+            <Units>
+                <Unit Name="metres">
+                    <Symbol>m</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="alignmentMillimetres">
+                    <Symbol>mm</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="millimetres">
+                    <Symbol>mm</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometres">
+                    <Symbol>
+                        &micro;m
+                    </Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches">
+                    <Symbol>in</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="thou">
+                    <Symbol>thou</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0000254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="alignmentInches">
+                    <Symbol>in</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micro-inches">
+                    <Symbol>&micro;in</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0000000254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="feet">
+                    <Symbol>ft</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.3048</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>metres</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_FEEDRATE">
+            <Units>
+                <Unit Name="millimetres_per_minute">
+                    <Symbol>mm/min</Symbol>
+                    <ShortName>mm/min</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches_per_minute">
+                    <Symbol>in/min</Symbol>
+                    <ShortName>in/min</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">25.4</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>millimetres_per_minute</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_ANGULAR_FEEDRATE">
+            <Units>
+                <Unit Name="degrees_per_minute">
+                    <Symbol>&deg;/min</Symbol>
+                    <ShortName>deg/min</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="degrees_per_second">
+                    <Symbol>&deg;/sec</Symbol>
+                    <ShortName>deg/sec</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">60.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="revolutions_per_minute">
+                    <Symbol>rpm</Symbol>
+                    <ShortName>rpm</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">360</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>degrees_per_minute</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_ANGLE">
+            <Units>
+                <Unit Name="targetDegrees">
+                    <Symbol>&deg;</Symbol>
+                    <ShortName>deg</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.017453292519943295769236907685</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="degrees">
+                    <Symbol>&deg;</Symbol>
+                    <ShortName>deg</ShortName>
+                    <DefaultPrecision>5</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.017453292519943295769236907685</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="radians">
+                    <Symbol>rad</Symbol>
+                    <ShortName>rad</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="milliradians">
+                    <Symbol>mrad</Symbol>
+                    <ShortName>mrad</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="millimetresPerMetre">
+                    <Symbol>mm/m</Symbol>
+                    <ShortName>mm per m</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microradians">
+                    <Symbol>&micro;rad</Symbol>
+                    <ShortName>&micro;rad</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometresPerMetre">
+                    <Symbol>&micro;m/m</Symbol>
+                    <ShortName>&micro;m per m</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="arcseconds">
+                    <Symbol>arcsec</Symbol>
+                    <ShortName>arcsec</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000004848136811095359935899141</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches_per_feet">
+                    <Symbol>inches/foot</Symbol>
+                    <ShortName>inches/foot</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0833333333333</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>radians</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_TEMPERATURE">
+            <Units>
+                <Unit Name="Celsius">
+                    <Symbol>&deg;C</Symbol>
+                    <ShortName>C</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="Fahrenheit">
+                    <Symbol>&deg;F</Symbol>
+                    <ShortName>F</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.555555555555556</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">-17.7777777777778</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>Celsius</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_PRESSURE">
+            <Units>
+                <Unit Name="millibar">
+                    <Symbol>mbar</Symbol>
+                    <ShortName>mbar</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">100.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="Pascal">
+                    <Symbol>Pa</Symbol>
+                    <ShortName>Pa</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="KiloPascal">
+                    <Symbol>kPa</Symbol>
+                    <ShortName>kilopascal</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>Pascal</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_HUMIDITY">
+            <Units>
+                <Unit Name="RelativeHumidity">
+                    <Symbol>%RH</Symbol>
+                    <ShortName>RH</ShortName>
+                    <DefaultPrecision>0</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>RelativeHumidity</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_EXPANSION_COEFF">
+            <Units>
+                <Unit Name="ppm_per_degrees_C">
+                    <Symbol>
+                        ppm/&deg;C
+                    </Symbol>
+                    <ShortName>ppmC</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="ppm_per_degrees_F">
+                    <Symbol>
+                        ppm/&deg;F
+                    </Symbol>
+                    <ShortName>ppmF</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.8</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometres_per_metre_degrees_C">
+                    <Symbol>&micro;m/m&deg;C</Symbol>
+                    <ShortName>µm/mC</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometres_per_metre_degrees_F">
+                    <Symbol>&micro;m/m&deg;F</Symbol>
+                    <ShortName>µm/mF</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.8</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometres_per_millimeters_degrees_C">
+                    <Symbol>&micro;m/mm&deg;C</Symbol>
+                    <ShortName>µm/mmC</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="micrometres_per_millimeters_degrees_F">
+                    <Symbol>&micro;m/mm&deg;F</Symbol>
+                    <ShortName>µm/mmF</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1800.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>ppm_per_degrees_C</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_FREQUENCY">
+            <Units>
+                <Unit Name="hertz">
+                    <Symbol>Hz</Symbol>
+                    <ShortName>hertz</ShortName>
+                    <DefaultPrecision>3</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>hertz</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_TIME">
+            <Units>
+                <Unit Name="seconds">
+                    <Symbol>s</Symbol>
+                    <ShortName>sec</ShortName>
+                    <DefaultPrecision>3</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="milliseconds">
+                    <Symbol>ms</Symbol>
+                    <ShortName>ms</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>seconds</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_VELOCITY">
+            <Units>
+                <Unit Name="metres_per_second">
+                    <Symbol>m/s</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="millimetres_per_second">
+                    <Symbol>mm/s</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="micrometres_per_second">
+                    <Symbol>&micro;m/s</Symbol>
+                    <ShortName>metric</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="inches_per_second">
+                    <Symbol>in/s</Symbol>
+                    <ShortName>in/s</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="thou_per_second">
+                    <Symbol>thou/s</Symbol>
+                    <ShortName>english</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder" >
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.0000254</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+
+            <PrimaryUnit>metres_per_second</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_SQUARENESS">
+            <Units>
+                <Unit Name="microns_per_metre">
+                    <Symbol>&micro;m/m</Symbol>
+                    <ShortName>um/m</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_millimetre">
+                    <Symbol>&micro;m/mm</Symbol>
+                    <ShortName>um/mm</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_300mm">
+                    <Symbol>&micro;m/300mm</Symbol>
+                    <ShortName>um/300mm</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">3.333333333333333</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_500mm">
+                    <Symbol>&micro;m/500mm</Symbol>
+                    <ShortName>um/500mm</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">2.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_foot">
+                    <Symbol>&micro;m/ft</Symbol>
+                    <ShortName>um/ft</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">3.28083989501312</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microinches_per_inch">
+                    <Symbol>&micro;in/in</Symbol>
+                    <ShortName>uin/in</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="arc_seconds">
+                    <Symbol>arcs</Symbol>
+                    <ShortName>arcs</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.AngularUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>factor</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>angle</Name>
+                            <Value type="double">648.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="thou_per_inch">
+                    <Symbol>thou/in</Symbol>
+                    <ShortName>thou/in</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches_per_inch">
+                    <Symbol>in/in</Symbol>
+                    <ShortName>in/in</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="degrees">
+                    <Symbol>&deg;</Symbol>
+                    <ShortName>deg</ShortName>
+                    <DefaultPrecision>5</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.AngularUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>factor</Name>
+                            <Value type="double">1000000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>angle</Name>
+                            <Value type="double">180.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="radians">
+                    <Symbol>rad</Symbol>
+                    <ShortName>rad</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">57.295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="milliradians">
+                    <Symbol>mrads</Symbol>
+                    <ShortName>mrad</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.057295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microradians">
+                    <Symbol>&micro;rads</Symbol>
+                    <ShortName>urad</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000057295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="millimetresPerMetre">
+                    <Symbol>mm/m</Symbol>
+                    <ShortName>mm per m</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches_per_feet">
+                    <Symbol>inches/foot</Symbol>
+                    <ShortName>inches/foot</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000012</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>microns_per_metre</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_SCALE_ERROR">
+            <Units>
+                <Unit Name="parts_per_million">
+                    <Symbol>ppm</Symbol>
+                    <ShortName>ppm</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_metre">
+                    <Symbol>&micro;m/m</Symbol>
+                    <ShortName>um/m</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_millimetre">
+                    <Symbol>&micro;m/mm</Symbol>
+                    <ShortName>um/mm</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microns_per_foot">
+                    <Symbol>&micro;m/ft</Symbol>
+                    <ShortName>um/ft</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">3.28083989501312</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microinches_per_inch">
+                    <Symbol>&micro;in/in</Symbol>
+                    <ShortName>uin/in</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="thou_per_inch">
+                    <Symbol>thou/in</Symbol>
+                    <ShortName>thou/in</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="inches_per_inch">
+                    <Symbol>in/in</Symbol>
+                    <ShortName>in/in</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1000000.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>parts_per_million</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_ANGULAR_VELOCITY">
+            <Units>
+
+                <Unit Name="degrees_per_second">
+                    <Symbol>&deg;/s</Symbol>
+                    <ShortName>degsPerSecond</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.017453292519943295769236907685</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="radians_per_second">
+                    <Symbol>rad/s</Symbol>
+                    <ShortName>radsPerSecond</ShortName>
+                    <DefaultPrecision>6</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="milliradians_per_second">
+                    <Symbol>mrad/s</Symbol>
+                    <ShortName>mradsPerSecond</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="millimetres_per_metre_per_second">
+                    <Symbol>mm/m/s</Symbol>
+                    <ShortName>mmPerMPerS</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="microradians_per_second">
+                    <Symbol>&micro;rad/s</Symbol>
+                    <ShortName>microradsPerSecond</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="arcseconds_per_second">
+                    <Symbol>arcsec/s</Symbol>
+                    <ShortName>arcsecsPerSecond</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000004848136811095359935899141</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+                <Unit Name="micrometres_per_metre_per_second">
+                    <Symbol>&micro;m/m/s</Symbol>
+                    <ShortName>umPerMPerS</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000001</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+
+            </Units>
+            <PrimaryUnit>radians_per_second</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_POSITION">
+            <Units>
+                <Unit Name="Target_Position_Number">
+                    <Symbol>Number</Symbol>
+                    <ShortName>position</ShortName>
+                    <DefaultPrecision>0</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>Target_Position_Number</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_ANGULARSLOPE">
+            <Units>
+                <Unit Name="degrees_per_metres">
+                    <Symbol>&deg;/m</Symbol>
+                    <ShortName>degrees/metre</ShortName>
+                    <DefaultPrecision>5</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="rad_per_metres">
+                    <Symbol>
+                        rad/m
+                    </Symbol>
+                    <ShortName>radians/metre</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">57.295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="arcsecs_per_metres">
+                    <Symbol>arcsecs/m</Symbol>
+                    <ShortName>arcseconds/metre</ShortName>
+                    <DefaultPrecision>2</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.00027777777777777777777777777777778</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="milliradians_per_metres">
+                    <Symbol>mrads/m</Symbol>
+                    <ShortName>mrad/metre</ShortName>
+                    <DefaultPrecision>4</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.057295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+                <Unit Name="microradians_per_metres">
+                    <Symbol>&micro;rads/m</Symbol>
+                    <ShortName>urad/metre</ShortName>
+                    <DefaultPrecision>1</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">0.000057295779513082320876798154814105</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>degrees_per_metres</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_NUMBER">
+            <Units>
+                <Unit Name="number">
+                    <Symbol></Symbol>
+                    <ShortName></ShortName>
+                    <DefaultPrecision>0</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>number</PrimaryUnit>
+        </Dimension>
+
+        <Dimension Name="UT_PERCENT">
+            <Units>
+                <Unit Name="percent">
+                    <Symbol>%</Symbol>
+                    <ShortName>percent</ShortName>
+                    <DefaultPrecision>0</DefaultPrecision>
+                    <UnitConverter type="Renishaw.Calibration.UnitService.LinearUnitConverterBuilder">
+                        <ParamCount>2</ParamCount>
+                        <Param>
+                            <Name>gradient</Name>
+                            <Value type="double">1.0</Value>
+                        </Param>
+                        <Param>
+                            <Name>intercept</Name>
+                            <Value type="double">0.0</Value>
+                        </Param>
+                    </UnitConverter>
+                </Unit>
+            </Units>
+            <PrimaryUnit>percent</PrimaryUnit>
+        </Dimension>
+
+    </Dimensions>
+
+    <Scales>
+
+        <Scale Name="Feedrate" Dimension="UT_FEEDRATE">
+            <Unit>millimetres_per_minute</Unit>
+            <Unit>inches_per_minute</Unit>
+            <DefaultLocaleUnit>millimetres_per_minute</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Temperature" Dimension="UT_TEMPERATURE">
+            <Unit>Celsius</Unit>
+            <Unit>Fahrenheit</Unit>
+            <DefaultLocaleUnit>Celsius</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExpansionCoeff" Dimension="UT_EXPANSION_COEFF">
+            <Unit>ppm_per_degrees_C</Unit>
+            <Unit>ppm_per_degrees_F</Unit>
+            <DefaultLocaleUnit>ppm_per_degrees_C</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Target" Dimension="UT_LENGTH">
+            <Unit>metres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="BallbarLength" Dimension="UT_LENGTH">
+            <Unit>metres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="BallbarErrors" Dimension="UT_LENGTH">
+            <Unit>micrometres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <Unit>thou</Unit>
+            <DefaultLocaleUnit>micrometres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Squareness" Dimension="UT_SQUARENESS">
+            <Unit>microns_per_metre</Unit>
+            <Unit>microns_per_millimetre</Unit>
+            <Unit>microns_per_foot</Unit>
+            <Unit>microinches_per_inch</Unit>
+            <Unit>arc_seconds</Unit>
+            <Unit>thou_per_inch</Unit>
+            <Unit>inches_per_inch</Unit>
+            <Unit>degrees</Unit>
+            <DefaultLocaleUnit>microns_per_metre</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ScaleError" Dimension="UT_SCALE_ERROR">
+            <Unit>parts_per_million</Unit>
+            <Unit>microns_per_metre</Unit>
+            <Unit>microns_per_millimetre</Unit>
+            <Unit>microns_per_foot</Unit>
+            <Unit>microinches_per_inch</Unit>
+            <Unit>thou_per_inch</Unit>
+            <Unit>inches_per_inch</Unit>
+            <DefaultLocaleUnit>parts_per_million</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="TargetTime" Dimension="UT_TIME">
+            <Unit>seconds</Unit>
+            <DefaultLocaleUnit>seconds</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Error" Dimension="UT_LENGTH">
+            <Unit>metres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>micrometres</Unit>
+            <Unit>inches</Unit>
+            <Unit>thou</Unit>
+            <DefaultLocaleUnit>micrometres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="AngularError" Dimension="UT_ANGLE">
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>micrometresPerMetre</Unit>
+            <Unit>radians</Unit>
+            <Unit>arcseconds</Unit>
+            <Unit>degrees</Unit>
+            <DefaultLocaleUnit>microradians</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="AngularTarget" Dimension="UT_ANGLE">
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>micrometresPerMetre</Unit>
+            <Unit>radians</Unit>
+            <Unit>arcseconds</Unit>
+            <Unit>targetDegrees</Unit>
+            <DefaultLocaleUnit>targetDegrees</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="RotaryError" Dimension="UT_ANGLE">
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>micrometresPerMetre</Unit>
+            <Unit>radians</Unit>
+            <Unit>arcseconds</Unit>
+            <Unit>degrees</Unit>
+            <DefaultLocaleUnit>degrees</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="LinearAlignment" Dimension="UT_LENGTH">
+            <Unit>alignmentMillimetres</Unit>
+            <Unit>alignmentInches</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>alignmentMillimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="AngularFeedrate" Dimension="UT_ANGULAR_FEEDRATE">
+            <Unit>degrees_per_minute</Unit>
+            <Unit>degrees_per_second</Unit>
+            <Unit>revolutions_per_minute</Unit>
+            <DefaultLocaleUnit>degrees_per_minute</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Velocity" Dimension="UT_VELOCITY">
+            <Unit>metres_per_second</Unit>
+            <Unit>millimetres_per_second</Unit>
+            <Unit>micrometres_per_second</Unit>
+            <Unit>inches_per_second</Unit>
+            <Unit>thou_per_second</Unit>
+            <DefaultLocaleUnit>micrometres_per_second</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="AngularVelocity" Dimension="UT_ANGULAR_VELOCITY">
+            <Unit>degrees_per_second</Unit>
+            <Unit>radians_per_second</Unit>
+            <Unit>arcseconds_per_second</Unit>
+            <Unit>microradians_per_second</Unit>
+            <Unit>milliradians_per_second</Unit>
+            <Unit>millimetres_per_metre_per_second</Unit>
+            <Unit>micrometres_per_metre_per_second</Unit>
+            <DefaultLocaleUnit>microradians_per_second</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="TargetPosition" Dimension="UT_POSITION">
+            <Unit>Target_Position_Number</Unit>
+            <DefaultLocaleUnit>Target_Position_Number</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExploreLinear" Dimension="UT_LENGTH">
+            <Unit>metres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>micrometres</Unit>
+            <Unit>inches</Unit>
+            <Unit>thou</Unit>
+            <Unit>micro-inches</Unit>
+            <Unit>feet</Unit>
+            <DefaultLocaleUnit>metres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExploreAngular" Dimension="UT_ANGLE">
+            <Unit>degrees</Unit>
+            <Unit>radians</Unit>
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>micrometresPerMetre</Unit>
+            <Unit>arcseconds</Unit>
+            <Unit>inches_per_feet</Unit>
+            <DefaultLocaleUnit>degrees</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExploreSquareness" Dimension="UT_SQUARENESS">
+            <Unit>microns_per_metre</Unit>
+            <Unit>microns_per_millimetre</Unit>
+            <Unit>microns_per_300mm</Unit>
+            <Unit>microns_per_500mm</Unit>
+            <Unit>microns_per_foot</Unit>
+            <Unit>microinches_per_inch</Unit>
+            <Unit>arc_seconds</Unit>
+            <Unit>thou_per_inch</Unit>
+            <Unit>inches_per_inch</Unit>
+            <Unit>degrees</Unit>
+            <Unit>radians</Unit>
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <DefaultLocaleUnit>microns_per_metre</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExplorePressure" Dimension="UT_PRESSURE">
+            <Unit>Pascal</Unit>
+            <Unit>millibar</Unit>
+            <DefaultLocaleUnit>Pascal</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ExploreExpansionCoeff" Dimension="UT_EXPANSION_COEFF">
+            <Unit>ppm_per_degrees_C</Unit>
+            <Unit>ppm_per_degrees_F</Unit>
+            <Unit>micrometres_per_metre_degrees_C</Unit>
+            <Unit>micrometres_per_metre_degrees_F</Unit>
+            <Unit>micrometres_per_millimeters_degrees_C</Unit>
+            <Unit>micrometres_per_millimeters_degrees_F</Unit>
+            <DefaultLocaleUnit>ppm_per_degrees_C</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Humidity" Dimension="UT_HUMIDITY">
+            <Unit>RelativeHumidity</Unit>
+            <DefaultLocaleUnit>RelativeHumidity</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="AngularSlope" Dimension="UT_ANGULARSLOPE">
+            <Unit>degrees_per_metres</Unit>
+            <Unit>rad_per_metres</Unit>
+            <Unit>arcsecs_per_metres</Unit>
+            <Unit>milliradians_per_metres</Unit>
+            <Unit>microradians_per_metres</Unit>
+            <DefaultLocaleUnit>degrees_per_metres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="Frequency" Dimension="UT_FREQUENCY">
+            <Unit>hertz</Unit>
+            <DefaultLocaleUnit>hertz</DefaultLocaleUnit>
+        </Scale>
+
+        <!--RenishawVolumetric, HidenhainVolumetric, SiemensLinear, RenishawLinear, FanucLinear-->
+        <Scale Name="AllLengthUnits" Dimension="UT_LENGTH">
+            <Unit>metres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>micrometres</Unit>
+            <Unit>inches</Unit>
+            <Unit>thou</Unit>
+            <Unit>micro-inches</Unit>
+            <Unit>feet</Unit>
+            <DefaultLocaleUnit>metres</DefaultLocaleUnit>
+        </Scale>
+
+        <!--RenishawVolumetric, HidenhainVolumetric, FanucLinear-->
+        <Scale Name="AllAngularUnits" Dimension="UT_ANGLE">
+            <Unit>degrees</Unit>
+            <Unit>radians</Unit>
+            <Unit>milliradians</Unit>
+            <Unit>microradians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>micrometresPerMetre</Unit>
+            <Unit>arcseconds</Unit>
+            <Unit>inches_per_feet</Unit>
+            <DefaultLocaleUnit>degrees</DefaultLocaleUnit>
+        </Scale>
+
+        <!--SiemensVolumetric-->
+        <Scale Name="SiemensVolumetricLength" Dimension="UT_LENGTH">
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="SiemensVolumetricDeviation" Dimension="UT_LENGTH">
+            <Unit>micrometres</Unit>
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="SiemensVolumetricAngular" Dimension="UT_ANGLE">
+            <Unit>arcseconds</Unit>
+            <Unit>radians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>inches_per_feet</Unit>
+            <DefaultLocaleUnit>arcseconds</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="SiemensVolumetricSquareness" Dimension="UT_SQUARENESS">
+            <Unit>microns_per_metre</Unit>
+            <Unit>arc_seconds</Unit>
+            <Unit>radians</Unit>
+            <Unit>millimetresPerMetre</Unit>
+            <Unit>inches_per_feet</Unit>
+            <Unit>microns_per_300mm</Unit>
+            <Unit>microns_per_500mm</Unit>
+            <DefaultLocaleUnit>microns_per_metre</DefaultLocaleUnit>
+        </Scale>
+
+        <!--FanucVolumetric-->
+        <Scale Name="FanucVolumetricLength" Dimension="UT_LENGTH">
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="FanucVolumetricAngular" Dimension="UT_ANGLE">
+            <Unit>degrees</Unit>
+            <Unit>radians</Unit>
+            <DefaultLocaleUnit>degrees</DefaultLocaleUnit>
+        </Scale>
+
+        <!--HeidenhainLinear-->
+        <Scale Name="HeidenhainLinearLength" Dimension="UT_LENGTH">
+            <Unit>millimetres</Unit>
+            <Unit>inches</Unit>
+            <DefaultLocaleUnit>millimetres</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="HeidenhainLinearRotary" Dimension="UT_ANGLE">
+            <Unit>degrees</Unit>
+            <DefaultLocaleUnit>degrees</DefaultLocaleUnit>
+        </Scale>
+
+        <Scale Name="ServoMismatch" Dimension="UT_TIME">
+            <Unit>milliseconds</Unit>
+            <DefaultLocaleUnit>milliseconds</DefaultLocaleUnit>
+        </Scale>
+
+    </Scales>
+
+</DimensionCatalog>

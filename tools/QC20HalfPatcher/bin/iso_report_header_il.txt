@@ -1,0 +1,538 @@
+﻿TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.BidirectionalCircularDeviationView::arcHeader|attrs=CompilerControlled, Private
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.CircularDeviation2005View::arcHeader|attrs=CompilerControlled, Private
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.MeanBidirectionalRadialDeviationView::arcHeader|attrs=CompilerControlled, Private
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View|attrs=AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit|base=System.Windows.Forms.UserControl
+INTERFACE|Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View|Renishaw.Calibration.Ballbar.Analysis.Interface.IAnalysisView
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl Renishaw.Calibration.Ballbar.Analysis.Iso230.RadialDeviation2005View::arcHeader|attrs=CompilerControlled, Private
+TYPE|Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl|attrs=AutoLayout, AnsiClass, Class, Public, BeforeFieldInit|base=System.Windows.Forms.UserControl
+FIELD|System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::components|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel|attrs=CompilerControlled, Private
+FIELD|Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType|attrs=CompilerControlled, Private
+FIELD|System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1|attrs=CompilerControlled, Private
+PROPERTY|System.Drawing.Color Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::BackColor()
+PROPERTY|System.Drawing.Color Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::ForeColor()
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::.ctor()|attrs=PrivateScope, ReuseSlot, Public, HideBySig, SpecialName, RTSpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Void System.Windows.Forms.UserControl::.ctor()
+IL|IL_0006: ldarg.0
+IL|IL_0007: call System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::InitializeComponent()
+IL|IL_000C: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::PopulateControls(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.String,System.String)|attrs=PrivateScope, ReuseSlot, Public, HideBySig|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: ldstr "result"
+IL|IL_0006: call Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult Microsoft.Requires::NotNull<Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult>(Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult,System.String)
+IL|IL_000B: pop
+IL|IL_000C: ldarg.0
+IL|IL_000D: call System.Void System.Windows.Forms.Control::SuspendLayout()
+IL|IL_0012: ldarg.0
+IL|IL_0013: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_0018: call System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::ChangeLanguage(System.Globalization.CultureInfo)
+IL|IL_001D: ldarg.0
+IL|IL_001E: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID
+IL|IL_0023: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_0028: ldstr "{0}"
+IL|IL_002D: ldarg.3
+IL|IL_002E: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object)
+IL|IL_0033: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_0038: ldarg.0
+IL|IL_0039: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_003E: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_0043: ldstr "{0}"
+IL|IL_0048: ldarg.2
+IL|IL_0049: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object)
+IL|IL_004E: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_0053: ldsfld System.String System.String::Empty
+IL|IL_0058: stloc.0
+IL|IL_0059: ldarg.1
+IL|IL_005A: callvirt System.DateTime Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_DateStarted()
+IL|IL_005F: ldsfld System.DateTime System.DateTime::MaxValue
+IL|IL_0064: call System.Boolean System.DateTime::op_Inequality(System.DateTime,System.DateTime)
+IL|IL_0069: brfalse.s IL_0084
+IL|IL_006B: ldarg.1
+IL|IL_006C: callvirt System.DateTime Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_DateCompleted()
+IL|IL_0071: stloc.2
+IL|IL_0072: ldloca.s V_2
+IL|IL_0074: call System.String Renishaw.Calibration.Ballbar.Analysis.Iso230.Properties.Resources::get_ISO230_4_2005_DateFormat()
+IL|IL_0079: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_007E: call System.String System.DateTime::ToString(System.String,System.IFormatProvider)
+IL|IL_0083: stloc.0
+IL|IL_0084: ldarg.0
+IL|IL_0085: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel
+IL|IL_008A: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_008F: ldstr "{0}: {1}"
+IL|IL_0094: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__testDate()
+IL|IL_0099: ldloc.0
+IL|IL_009A: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL|IL_009F: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_00A4: ldarg.1
+IL|IL_00A5: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_MachineTested()
+IL|IL_00AA: ldstr "QuickCheck"
+IL|IL_00AF: call System.Boolean System.String::op_Equality(System.String,System.String)
+IL|IL_00B4: brtrue.s IL_00BE
+IL|IL_00B6: ldarg.1
+IL|IL_00B7: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_MachineTested()
+IL|IL_00BC: br.s IL_00C3
+IL|IL_00BE: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__quickCheck()
+IL|IL_00C3: stloc.1
+IL|IL_00C4: ldarg.0
+IL|IL_00C5: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel
+IL|IL_00CA: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_00CF: ldstr "{0}: {1}"
+IL|IL_00D4: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__machineName()
+IL|IL_00D9: ldloc.1
+IL|IL_00DA: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL|IL_00DF: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_00E4: ldarg.0
+IL|IL_00E5: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel
+IL|IL_00EA: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230AnalysisResources::get_Culture()
+IL|IL_00EF: ldstr "{0}: {1}"
+IL|IL_00F4: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__operatorName()
+IL|IL_00F9: ldarg.1
+IL|IL_00FA: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_Operator()
+IL|IL_00FF: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL|IL_0104: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_0109: ldarg.1
+IL|IL_010A: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_BallbarUsedRecord()
+IL|IL_010F: brfalse.s IL_0180
+IL|IL_0111: ldarg.1
+IL|IL_0112: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_BallbarUsedRecord()
+IL|IL_0117: callvirt System.DateTime Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord::get_LastCalibrated()
+IL|IL_011C: stloc.3
+IL|IL_011D: ldloca.s V_3
+IL|IL_011F: ldstr "yyy-MM-dd"
+IL|IL_0124: call System.String System.DateTime::ToString(System.String)
+IL|IL_0129: stloc.s V_4
+IL|IL_012B: ldloc.3
+IL|IL_012C: ldsfld System.DateTime System.DateTime::MaxValue
+IL|IL_0131: call System.Boolean System.DateTime::op_Equality(System.DateTime,System.DateTime)
+IL|IL_0136: brfalse.s IL_013F
+IL|IL_0138: ldstr "-"
+IL|IL_013D: stloc.s V_4
+IL|IL_013F: ldarg.0
+IL|IL_0140: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue
+IL|IL_0145: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get_Culture()
+IL|IL_014A: ldstr "{0}: {1}"
+IL|IL_014F: ldarg.1
+IL|IL_0150: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_BallbarUsedRecord()
+IL|IL_0155: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord::get_Model()
+IL|IL_015A: call System.Globalization.CultureInfo Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get_Culture()
+IL|IL_015F: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__QC10Ballbar()
+IL|IL_0164: ldarg.1
+IL|IL_0165: callvirt Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_BallbarUsedRecord()
+IL|IL_016A: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.IBallbarUsedRecord::get_SerialNumber()
+IL|IL_016F: ldloc.s V_4
+IL|IL_0171: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL|IL_0176: call System.String System.String::Format(System.IFormatProvider,System.String,System.Object,System.Object)
+IL|IL_017B: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_0180: ldarg.1
+IL|IL_0181: callvirt System.Boolean Renishaw.Calibration.Ballbar.Infrastructure.Interface.IPersistStatus::get_IsDirty()
+IL|IL_0186: brfalse.s IL_019A
+IL|IL_0188: ldarg.0
+IL|IL_0189: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_018E: call System.String Renishaw.Calibration.Ballbar.Analysis.Interface.AnalysisReportResources::get__warningDocNotSaved()
+IL|IL_0193: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_0198: br.s IL_01B0
+IL|IL_019A: ldarg.0
+IL|IL_019B: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_01A0: ldarg.1
+IL|IL_01A1: callvirt System.String Renishaw.Calibration.Ballbar.TestDocumentService.Interface.ITestResult::get_Name()
+IL|IL_01A6: call System.String System.IO.Path::GetFileNameWithoutExtension(System.String)
+IL|IL_01AB: callvirt System.Void System.Windows.Forms.Control::set_Text(System.String)
+IL|IL_01B0: ldarg.0
+IL|IL_01B1: call System.Void System.Windows.Forms.Control::ResumeLayout()
+IL|IL_01B6: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::ChangeLanguage(System.Globalization.CultureInfo)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Void System.Windows.Forms.Control::SuspendLayout()
+IL|IL_0006: ldtoken Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl
+IL|IL_000B: call System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL|IL_0010: newobj System.Void System.ComponentModel.ComponentResourceManager::.ctor(System.Type)
+IL|IL_0015: stloc.0
+IL|IL_0016: ldarg.0
+IL|IL_0017: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_001C: ldloc.0
+IL|IL_001D: ldarg.1
+IL|IL_001E: call System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.Iso230ReportView::ApplyResourcesToLabels(System.Windows.Forms.Control,System.ComponentModel.ComponentResourceManager,System.Globalization.CultureInfo)
+IL|IL_0023: ldarg.0
+IL|IL_0024: call System.Void System.Windows.Forms.Control::ResumeLayout()
+IL|IL_0029: ret
+METHOD|System.Drawing.Color Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::get_BackColor()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Drawing.Color System.Windows.Forms.Control::get_BackColor()
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::set_BackColor(System.Drawing.Color)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldarg.1
+IL|IL_0002: call System.Void System.Windows.Forms.Control::set_BackColor(System.Drawing.Color)
+IL|IL_0007: ldarg.0
+IL|IL_0008: ldarg.1
+IL|IL_0009: call System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::UpdateBackColours(System.Drawing.Color)
+IL|IL_000E: ret
+METHOD|System.Drawing.Color Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::get_ForeColor()|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Drawing.Color System.Windows.Forms.Control::get_ForeColor()
+IL|IL_0006: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::set_ForeColor(System.Drawing.Color)|attrs=PrivateScope, ReuseSlot, Public, Virtual, HideBySig, SpecialName|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: ldarg.1
+IL|IL_0002: call System.Void System.Windows.Forms.Control::set_ForeColor(System.Drawing.Color)
+IL|IL_0007: ldarg.0
+IL|IL_0008: ldarg.1
+IL|IL_0009: call System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::UpdateForeColours(System.Drawing.Color)
+IL|IL_000E: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::UpdateBackColours(System.Drawing.Color)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Windows.Forms.Control/ControlCollection System.Windows.Forms.Control::get_Controls()
+IL|IL_0006: callvirt System.Collections.IEnumerator System.Windows.Forms.Layout.ArrangedElementCollection::GetEnumerator()
+IL|IL_000B: stloc.0
+IL|IL_000C: br.s IL_0039
+IL|IL_000E: ldloc.0
+IL|IL_000F: callvirt System.Object System.Collections.IEnumerator::get_Current()
+IL|IL_0014: castclass System.Windows.Forms.Control
+IL|IL_0019: stloc.1
+IL|IL_001A: ldloc.1
+IL|IL_001B: callvirt System.String System.Windows.Forms.Control::get_Name()
+IL|IL_0020: ldarg.0
+IL|IL_0021: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_0026: callvirt System.String System.Windows.Forms.Control::get_Name()
+IL|IL_002B: call System.Boolean System.String::op_Inequality(System.String,System.String)
+IL|IL_0030: brfalse.s IL_0039
+IL|IL_0032: ldloc.1
+IL|IL_0033: ldarg.1
+IL|IL_0034: callvirt System.Void System.Windows.Forms.Control::set_BackColor(System.Drawing.Color)
+IL|IL_0039: ldloc.0
+IL|IL_003A: callvirt System.Boolean System.Collections.IEnumerator::MoveNext()
+IL|IL_003F: brtrue.s IL_000E
+IL|IL_0041: leave.s IL_0054
+IL|IL_0043: ldloc.0
+IL|IL_0044: isinst System.IDisposable
+IL|IL_0049: stloc.2
+IL|IL_004A: ldloc.2
+IL|IL_004B: brfalse.s IL_0053
+IL|IL_004D: ldloc.2
+IL|IL_004E: callvirt System.Void System.IDisposable::Dispose()
+IL|IL_0053: endfinally
+IL|IL_0054: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::UpdateForeColours(System.Drawing.Color)|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+IL|IL_0000: ldarg.0
+IL|IL_0001: call System.Windows.Forms.Control/ControlCollection System.Windows.Forms.Control::get_Controls()
+IL|IL_0006: callvirt System.Collections.IEnumerator System.Windows.Forms.Layout.ArrangedElementCollection::GetEnumerator()
+IL|IL_000B: stloc.0
+IL|IL_000C: br.s IL_0039
+IL|IL_000E: ldloc.0
+IL|IL_000F: callvirt System.Object System.Collections.IEnumerator::get_Current()
+IL|IL_0014: castclass System.Windows.Forms.Control
+IL|IL_0019: stloc.1
+IL|IL_001A: ldloc.1
+IL|IL_001B: callvirt System.String System.Windows.Forms.Control::get_Name()
+IL|IL_0020: ldarg.0
+IL|IL_0021: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_0026: callvirt System.String System.Windows.Forms.Control::get_Name()
+IL|IL_002B: call System.Boolean System.String::op_Inequality(System.String,System.String)
+IL|IL_0030: brfalse.s IL_0039
+IL|IL_0032: ldloc.1
+IL|IL_0033: ldarg.1
+IL|IL_0034: callvirt System.Void System.Windows.Forms.Control::set_ForeColor(System.Drawing.Color)
+IL|IL_0039: ldloc.0
+IL|IL_003A: callvirt System.Boolean System.Collections.IEnumerator::MoveNext()
+IL|IL_003F: brtrue.s IL_000E
+IL|IL_0041: leave.s IL_0054
+IL|IL_0043: ldloc.0
+IL|IL_0044: isinst System.IDisposable
+IL|IL_0049: stloc.2
+IL|IL_004A: ldloc.2
+IL|IL_004B: brfalse.s IL_0053
+IL|IL_004D: ldloc.2
+IL|IL_004E: callvirt System.Void System.IDisposable::Dispose()
+IL|IL_0053: endfinally
+IL|IL_0054: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::Dispose(System.Boolean)|attrs=PrivateScope, ReuseSlot, Family, Virtual, HideBySig|impl=IL
+IL|IL_0000: ldarg.1
+IL|IL_0001: brfalse.s IL_0016
+IL|IL_0003: ldarg.0
+IL|IL_0004: ldfld System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::components
+IL|IL_0009: brfalse.s IL_0016
+IL|IL_000B: ldarg.0
+IL|IL_000C: ldfld System.ComponentModel.IContainer Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::components
+IL|IL_0011: callvirt System.Void System.IDisposable::Dispose()
+IL|IL_0016: ldarg.0
+IL|IL_0017: ldarg.1
+IL|IL_0018: call System.Void System.Windows.Forms.ContainerControl::Dispose(System.Boolean)
+IL|IL_001D: ret
+METHOD|System.Void Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::InitializeComponent()|attrs=PrivateScope, ReuseSlot, Private, HideBySig|impl=IL
+IL|IL_0000: ldtoken Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl
+IL|IL_0005: call System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL|IL_000A: newobj System.Void System.ComponentModel.ComponentResourceManager::.ctor(System.Type)
+IL|IL_000F: ldarg.0
+IL|IL_0010: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_0015: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID
+IL|IL_001A: ldarg.0
+IL|IL_001B: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_0020: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel
+IL|IL_0025: ldarg.0
+IL|IL_0026: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_002B: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_0030: ldarg.0
+IL|IL_0031: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_0036: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel
+IL|IL_003B: ldarg.0
+IL|IL_003C: newobj System.Void Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator::.ctor()
+IL|IL_0041: stfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_0046: ldarg.0
+IL|IL_0047: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_004C: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel
+IL|IL_0051: ldarg.0
+IL|IL_0052: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_0057: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue
+IL|IL_005C: ldarg.0
+IL|IL_005D: newobj System.Void System.Windows.Forms.PictureBox::.ctor()
+IL|IL_0062: stfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_0067: ldarg.0
+IL|IL_0068: newobj System.Void System.Windows.Forms.Label::.ctor()
+IL|IL_006D: stfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_0072: ldarg.0
+IL|IL_0073: newobj System.Void System.Windows.Forms.TableLayoutPanel::.ctor()
+IL|IL_0078: stfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_007D: ldarg.0
+IL|IL_007E: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_0083: callvirt System.Void System.ComponentModel.ISupportInitialize::BeginInit()
+IL|IL_0088: ldarg.0
+IL|IL_0089: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_008E: callvirt System.Void System.Windows.Forms.Control::SuspendLayout()
+IL|IL_0093: ldarg.0
+IL|IL_0094: call System.Void System.Windows.Forms.Control::SuspendLayout()
+IL|IL_0099: dup
+IL|IL_009A: ldarg.0
+IL|IL_009B: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID
+IL|IL_00A0: ldstr "lblReportID"
+IL|IL_00A5: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_00AA: ldarg.0
+IL|IL_00AB: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID
+IL|IL_00B0: ldstr "lblReportID"
+IL|IL_00B5: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_00BA: dup
+IL|IL_00BB: ldarg.0
+IL|IL_00BC: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel
+IL|IL_00C1: ldstr "lblOperatorLabel"
+IL|IL_00C6: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_00CB: ldarg.0
+IL|IL_00CC: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel
+IL|IL_00D1: ldstr "lblOperatorLabel"
+IL|IL_00D6: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_00DB: dup
+IL|IL_00DC: ldarg.0
+IL|IL_00DD: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_00E2: ldstr "lblName"
+IL|IL_00E7: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_00EC: ldarg.0
+IL|IL_00ED: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_00F2: ldarg.0
+IL|IL_00F3: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_00F8: ldc.i4.2
+IL|IL_00F9: callvirt System.Void System.Windows.Forms.TableLayoutPanel::SetColumnSpan(System.Windows.Forms.Control,System.Int32)
+IL|IL_00FE: ldarg.0
+IL|IL_00FF: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_0104: ldstr "lblName"
+IL|IL_0109: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_010E: dup
+IL|IL_010F: ldarg.0
+IL|IL_0110: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel
+IL|IL_0115: ldstr "lblDateLabel"
+IL|IL_011A: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_011F: ldarg.0
+IL|IL_0120: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel
+IL|IL_0125: ldstr "lblDateLabel"
+IL|IL_012A: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_012F: ldarg.0
+IL|IL_0130: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_0135: ldarg.0
+IL|IL_0136: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_013B: ldc.i4.2
+IL|IL_013C: callvirt System.Void System.Windows.Forms.TableLayoutPanel::SetColumnSpan(System.Windows.Forms.Control,System.Int32)
+IL|IL_0141: dup
+IL|IL_0142: ldarg.0
+IL|IL_0143: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_0148: ldstr "lblSeparator"
+IL|IL_014D: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_0152: ldarg.0
+IL|IL_0153: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_0158: ldstr "lblSeparator"
+IL|IL_015D: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_0162: dup
+IL|IL_0163: ldarg.0
+IL|IL_0164: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel
+IL|IL_0169: ldstr "lblMachineLabel"
+IL|IL_016E: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_0173: ldarg.0
+IL|IL_0174: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel
+IL|IL_0179: ldstr "lblMachineLabel"
+IL|IL_017E: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_0183: dup
+IL|IL_0184: ldarg.0
+IL|IL_0185: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue
+IL|IL_018A: ldstr "lblBallbarValue"
+IL|IL_018F: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_0194: ldarg.0
+IL|IL_0195: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue
+IL|IL_019A: ldstr "lblBallbarValue"
+IL|IL_019F: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_01A4: dup
+IL|IL_01A5: ldarg.0
+IL|IL_01A6: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_01AB: ldstr "picRenishaw"
+IL|IL_01B0: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_01B5: ldarg.0
+IL|IL_01B6: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_01BB: call System.Drawing.Bitmap Renishaw.Calibration.Ballbar.Analysis.Iso230.Properties.Resources::get_logo()
+IL|IL_01C0: callvirt System.Void System.Windows.Forms.PictureBox::set_Image(System.Drawing.Image)
+IL|IL_01C5: ldarg.0
+IL|IL_01C6: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_01CB: ldstr "picRenishaw"
+IL|IL_01D0: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_01D5: ldarg.0
+IL|IL_01D6: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_01DB: ldc.i4.0
+IL|IL_01DC: callvirt System.Void System.Windows.Forms.PictureBox::set_TabStop(System.Boolean)
+IL|IL_01E1: dup
+IL|IL_01E2: ldarg.0
+IL|IL_01E3: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_01E8: ldstr "lblReportIDType"
+IL|IL_01ED: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_01F2: ldarg.0
+IL|IL_01F3: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_01F8: ldarg.0
+IL|IL_01F9: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_01FE: ldc.i4.2
+IL|IL_01FF: callvirt System.Void System.Windows.Forms.TableLayoutPanel::SetColumnSpan(System.Windows.Forms.Control,System.Int32)
+IL|IL_0204: ldarg.0
+IL|IL_0205: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_020A: ldstr "lblReportIDType"
+IL|IL_020F: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_0214: dup
+IL|IL_0215: ldarg.0
+IL|IL_0216: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_021B: ldstr "tableLayoutPanel1"
+IL|IL_0220: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_0225: ldarg.0
+IL|IL_0226: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_022B: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_0230: ldarg.0
+IL|IL_0231: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_0236: ldc.i4.1
+IL|IL_0237: ldc.i4.0
+IL|IL_0238: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_023D: ldarg.0
+IL|IL_023E: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_0243: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_0248: ldarg.0
+IL|IL_0249: ldfld Renishaw.Calibration.Ballbar.Analysis.Interface.UI.Seperator Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblSeparator
+IL|IL_024E: ldc.i4.0
+IL|IL_024F: ldc.i4.5
+IL|IL_0250: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_0255: ldarg.0
+IL|IL_0256: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_025B: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_0260: ldarg.0
+IL|IL_0261: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblBallbarValue
+IL|IL_0266: ldc.i4.1
+IL|IL_0267: ldc.i4.4
+IL|IL_0268: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_026D: ldarg.0
+IL|IL_026E: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_0273: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_0278: ldarg.0
+IL|IL_0279: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportIDType
+IL|IL_027E: ldc.i4.0
+IL|IL_027F: ldc.i4.1
+IL|IL_0280: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_0285: ldarg.0
+IL|IL_0286: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_028B: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_0290: ldarg.0
+IL|IL_0291: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblOperatorLabel
+IL|IL_0296: ldc.i4.0
+IL|IL_0297: ldc.i4.3
+IL|IL_0298: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_029D: ldarg.0
+IL|IL_029E: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_02A3: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_02A8: ldarg.0
+IL|IL_02A9: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblDateLabel
+IL|IL_02AE: ldc.i4.0
+IL|IL_02AF: ldc.i4.4
+IL|IL_02B0: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_02B5: ldarg.0
+IL|IL_02B6: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_02BB: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_02C0: ldarg.0
+IL|IL_02C1: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblReportID
+IL|IL_02C6: ldc.i4.0
+IL|IL_02C7: ldc.i4.0
+IL|IL_02C8: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_02CD: ldarg.0
+IL|IL_02CE: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_02D3: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_02D8: ldarg.0
+IL|IL_02D9: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblName
+IL|IL_02DE: ldc.i4.0
+IL|IL_02DF: ldc.i4.2
+IL|IL_02E0: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_02E5: ldarg.0
+IL|IL_02E6: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_02EB: callvirt System.Windows.Forms.TableLayoutControlCollection System.Windows.Forms.TableLayoutPanel::get_Controls()
+IL|IL_02F0: ldarg.0
+IL|IL_02F1: ldfld System.Windows.Forms.Label Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::lblMachineLabel
+IL|IL_02F6: ldc.i4.1
+IL|IL_02F7: ldc.i4.3
+IL|IL_02F8: callvirt System.Void System.Windows.Forms.TableLayoutControlCollection::Add(System.Windows.Forms.Control,System.Int32,System.Int32)
+IL|IL_02FD: ldarg.0
+IL|IL_02FE: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_0303: ldstr "tableLayoutPanel1"
+IL|IL_0308: callvirt System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_030D: ldarg.0
+IL|IL_030E: ldc.i4.0
+IL|IL_030F: call System.Void System.Windows.Forms.ContainerControl::set_AutoScaleMode(System.Windows.Forms.AutoScaleMode)
+IL|IL_0314: ldarg.0
+IL|IL_0315: call System.Drawing.Color System.Drawing.Color::get_White()
+IL|IL_031A: callvirt System.Void System.Windows.Forms.Control::set_BackColor(System.Drawing.Color)
+IL|IL_031F: ldarg.0
+IL|IL_0320: call System.Windows.Forms.Control/ControlCollection System.Windows.Forms.Control::get_Controls()
+IL|IL_0325: ldarg.0
+IL|IL_0326: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_032B: callvirt System.Void System.Windows.Forms.Control/ControlCollection::Add(System.Windows.Forms.Control)
+IL|IL_0330: ldarg.0
+IL|IL_0331: ldc.i4.1
+IL|IL_0332: callvirt System.Void System.Windows.Forms.Control::set_DoubleBuffered(System.Boolean)
+IL|IL_0337: ldarg.0
+IL|IL_0338: ldstr "$this"
+IL|IL_033D: callvirt System.Void System.ComponentModel.ComponentResourceManager::ApplyResources(System.Object,System.String)
+IL|IL_0342: ldarg.0
+IL|IL_0343: ldstr "IsoAnalysisReportHeaderControl"
+IL|IL_0348: call System.Void System.Windows.Forms.Control::set_Name(System.String)
+IL|IL_034D: ldarg.0
+IL|IL_034E: ldfld System.Windows.Forms.PictureBox Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::picRenishaw
+IL|IL_0353: callvirt System.Void System.ComponentModel.ISupportInitialize::EndInit()
+IL|IL_0358: ldarg.0
+IL|IL_0359: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_035E: ldc.i4.0
+IL|IL_035F: callvirt System.Void System.Windows.Forms.Control::ResumeLayout(System.Boolean)
+IL|IL_0364: ldarg.0
+IL|IL_0365: ldfld System.Windows.Forms.TableLayoutPanel Renishaw.Calibration.Ballbar.Analysis.Iso230.UI.IsoAnalysisReportHeaderControl::tableLayoutPanel1
+IL|IL_036A: callvirt System.Void System.Windows.Forms.Control::PerformLayout()
+IL|IL_036F: ldarg.0
+IL|IL_0370: ldc.i4.0
+IL|IL_0371: call System.Void System.Windows.Forms.Control::ResumeLayout(System.Boolean)
+IL|IL_0376: ret
